@@ -4,10 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OctoSearch</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/mediaqueries.css" />
 </head>
 <body>
-    
+    <div class="wrapper">
+        <div class="heading">
+            <div class="title-container">
+                <h1 class="title">OctoSearch</h1>
+            </div>
+            <div class="screen-mode-section">
+                <p>Dark Mode</p>
+                <button id="screen-mode-btn">
+                    <img class="screen-mode-icon" src="/assets/dark-mode-icon.svg" alt="Dark mode icon">
+                </button>
+            </div>
+        </div>
+        <form class="search-bar">
+            <img class="search-icon" src="/assets/search-icon.svg" alt="Search icon">
+            <input type="text" placeholder="Search Github username..." />
+            <button class="search-btn">Search</button>
+        </form>
+    </div>
 </body>
 </html>
