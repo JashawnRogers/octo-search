@@ -20,7 +20,7 @@ body {
 }
 
 .wrapper {
-    width: 700px;
+    width: 900px;
     max-width: 100%;
     display: flex;
     flex-direction: column;
@@ -54,12 +54,14 @@ input {
     padding: 12px 20px;
     width: 100%;
     background: none;
-    border: 2px solid black;
+    box-shadow: 10px 5px 5px gray;
+    border: 0.5px solid gray;
     border-radius: 15px;
     font: inherit;
     height: 65px;
     padding-left: 55px;
     caret-color: var(--accent);
+    
 }
 
 input:focus {
@@ -97,4 +99,119 @@ input:focus {
 
 .screen-mode-icon {
     height: 40px;
+}
+
+.results-container {
+    width: 100%;
+    box-shadow: 10px 5px 5px 5px gray;
+    border: 0.5px solid gray;
+    border-radius: 15px;
+    margin: 5rem 0;
+
+    display: grid;
+    grid-template-areas: 
+    'pic header'
+    'pic content'
+    'pic socials';
+    
+}
+
+aside {
+    margin: 0 auto;
+    grid-area: pic;
+}
+
+aside img {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    margin-top: 1rem;
+}
+
+.results-heading {
+    margin-top: 1rem;
+    grid-area: header;
+    display: flex;
+    justify-content: space-around;
+}
+
+.profile-handle, .username {
+    margin: 0;
+}
+
+.bio {
+    grid-area: content;
+    margin: 1rem auto;
+}
+
+textarea {
+    width: 90%;
+    font-family: inherit;
+    border: none;
+    height: 100px;
+    text-indent: 0;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+.repos-following {
+    width: 90%;
+    height: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 15px;
+    background-color: lightgray;
+    margin: 2rem 0;
+}
+
+.repos, .followers, .following {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0;
+}
+
+.repos-following-title {
+    margin-bottom: 0;
+}
+
+.numbers {
+    text-align: center;
+}
+
+.socials-container {
+    font-size: 1rem;
+    grid-area: socials;
+    display: grid;
+    grid-template-areas: 
+    'location twitter'
+    'link website';
+    margin-bottom: 2rem;
+}
+
+.inner-grid {
+    width: 100%;
+    font-size: 1rem;
+}
+
+.location-container {
+    grid-area: location;
+}
+
+.twitter-container {
+    grid-area: twitter;
+}
+
+.link-container {
+    grid-area: link;
+}
+
+.website-container {
+    grid-area: website;
+}
+
+.location-container, .twitter-container, .link-container, .website-container {
+    display: flex;
+    column-gap: 0.5rem;
 }
