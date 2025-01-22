@@ -139,6 +139,10 @@ aside img {
     margin: 0;
 }
 
+.profile-handle {
+    color: var(--accent);
+}
+
 .bio {
     grid-area: content;
     margin: 1rem auto;
@@ -219,4 +223,5 @@ textarea:focus {
 footer {
     margin: auto auto 1.5rem;
     font-size: 1rem;
+    justify-content: baseline;
 }
