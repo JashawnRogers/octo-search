@@ -4,9 +4,11 @@
     --accent: #918450;
     --dark-mode-bg: #2f2f2f;
     --dark-mode-text: #e2e2e2;
+    --dark-mode-accent: #3f3f3f;
     --bio-box-bg: #d8d4d5;
     --light-mode-text: #2f2f2f;
     --light-mode-accent: #2f2f2f;
+
 }
 
 html {
@@ -17,6 +19,14 @@ html {
 body {
     font-family: 'Roboto Mono', serif;
     font-size: 16pt;
+}
+
+button {
+    cursor: pointer;
+}
+
+i {
+    margin-top: 1.1rem;
 }
 
 .wrapper {
@@ -224,4 +234,52 @@ footer {
     margin: auto auto 1.5rem;
     font-size: 1rem;
     justify-content: baseline;
+}
+
+.darkmode {
+    background-color: var(--dark-mode-bg);
+    color: var(--dark-mode-text);
+    transition: 200ms ease-in-out;
+}
+
+.darkmode h1 {
+    color: var(--accent);
+    transition: 200ms ease-in-out;
+}
+
+.darkmode .screen-mode-section p {
+    color: var(--accent);
+    transition: 200ms ease-in-out;
+}
+
+.darkmode input, .darkmode .results-container {
+    box-shadow: 10px 5px 5px black;
+    background-color: var(--dark-mode-accent);
+    border: 1px solid black;
+    transition: 200ms ease-in-out;
+}
+
+.darkmode input::placeholder {
+    color: var(--dark-mode-text);
+    transition: 200ms ease-in-out;
+}
+
+.darkmode .join-date {
+    color: var(--accent);
+    transition: 200ms ease-in-out;
+}
+
+.darkmode textarea {
+    background-color: var(--dark-mode-accent);
+    color: var(--dark-mode-text);
+    transition: 200ms ease-in-out;
+}
+
+.darkmode .repos-following {
+    background-color: var(--dark-mode-bg);
+    transition: 200ms ease-in-out;
+}
+
+.darkmode .social-icons {
+    color: var(--dark-mode-text);
 }
