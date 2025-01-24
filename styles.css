@@ -29,6 +29,16 @@ i {
     margin-top: 1.1rem;
 }
 
+a {
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 0.9rem;
+}
+
+a, a:visited, a:hover, a:active {
+    color: inherit;
+  }
+
 .wrapper {
     width: 900px;
     max-width: 100%;
@@ -36,6 +46,8 @@ i {
     flex-direction: column;
     margin: 0 auto;
     gap: 10px;
+    min-height: 100vh;
+    justify-content: space-between;
 }
 
 .heading {
@@ -72,6 +84,14 @@ input {
     padding-left: 55px;
     caret-color: var(--accent);
     
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+  transition: background-color 5000s;
+  -webkit-text-fill-color: var(--light-mode-text) !important;
 }
 
 input:focus {
@@ -162,8 +182,9 @@ textarea {
     width: 90%;
     font-family: inherit;
     border: none;
-    height: 100px;
+    height: auto;
     text-indent: 0;
+    margin-top: 1.5rem;
 }
 
 textarea:focus {
@@ -195,7 +216,7 @@ textarea:focus {
 }
 
 .socials-container {
-    font-size: 1rem;
+    font-size: 0.9rem;
     grid-area: socials;
     display: grid;
     grid-template-areas: 
@@ -257,11 +278,20 @@ footer {
     background-color: var(--dark-mode-accent);
     border: 1px solid black;
     transition: 200ms ease-in-out;
+    color: var(--dark-mode-text);
 }
 
 .darkmode input::placeholder {
     color: var(--dark-mode-text);
     transition: 200ms ease-in-out;
+}
+
+.darkmode input:-webkit-autofill,
+.darkmode input:-webkit-autofill:hover, 
+.darkmode input:-webkit-autofill:focus, 
+.darkmode input:-webkit-autofill:active  {
+  transition: background-color 5000s;
+  -webkit-text-fill-color: var(--dark-mode-text) !important;
 }
 
 .darkmode .join-date {
