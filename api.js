@@ -3,9 +3,10 @@ const resultsContainer = document.querySelector('.results-container');
 const searchBtn = document.querySelector('.search-btn');
 
 async function getData() {
+    // Get user input when function is called rather than the global scope
     const userInput = document.getElementById('user-input').value.trim();
     if (!userInput) {
-        resultsContainer.innerHTML = `<p>Please enter a valid GitHub username.</p>`;
+         alert(`Please enter a valid GitHub username`);
         return;
     }
     const url = `https://api.github.com/users/${userInput}`;
@@ -14,10 +15,10 @@ async function getData() {
 
         if (!response.ok) { 
             throw new Error(`Error ${response.status}: ${response.statusText}`);
-        }
+        } // Allows program to immediately exit and handle error 
 
         const data = await response.json();
-
+        // Convert date from API response 
         const isoString = new Date(data.created_at);
         const formattedDate = new Intl.DateTimeFormat('en-US', {
             year: 'numeric',
@@ -71,17 +72,18 @@ async function getData() {
                     </div>
                     <div class="website-container">
                         <i class="fa-solid fa-link"></i>
-                        <a href="${data.blog}" target="_blank">${data.blog || 'N/A'}</a>
+                        <a href="https://${data.blog}" target="_blank">${data.blog || 'N/A'}</a>
                     </div>
                 </div>
             </div>
         `;
     } catch (error) {
+        // Fetch Error
         console.error('Error:', error);
         resultsContainer.innerHTML = `<p>Something went wrong: ${error.message}</p>`;
     }
 }
-// getData();
+
 
 
 searchBtn.addEventListener('click', (e) => {
